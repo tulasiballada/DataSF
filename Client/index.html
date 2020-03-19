@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="CodeHill">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>DataSFO</title>
+ 
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+  <script src="js/angular-ui-router.min.js"></script>
+  <script src="logic/table2excel.js" type="text/javascript"></script>
+
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+  <script src="js/dirPagination.js"></script>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="logic/codehill.js"></script>
+	 <script src="logic/sfoGov.js"></script>
+
+   <script src="logic/scriptExcel.js"></script>
+   
+      <script src="logic/dashboard.js"></script>
+      <script src="logic/table2excel.js"></script>
+ 
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link href="css/custom/signin.css" rel="stylesheet">
+	<link href="css/custom/dashboard.css" rel="stylesheet">
+	<script src="js/ngStorage.min.js"></script>
+
+
+<script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
+
+<!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  </head>
+
+  <body>
+
+
+  <div ui-view>
+    
+  </div>
+
+   
+
+  
+  </body>
+</html>

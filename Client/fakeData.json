@@ -1,0 +1,14 @@
+
+[
+	{"time":"2019-06-04T14:17:00.000Z","airline":"EVA Airways","flight_number":"BR28","transaction":"ARR","terminal":5,"gate":"G98"},
+	{"time":"2019-06-04T19:47:00.000","airline":"Delta Airlines","flight_number":"DL298","transaction":"ARR","terminal":1,"gate":"42"},
+	{"time":"2019-06-04T19:46:00.000","airline":"United Airlines","flight_number":"UA481","transaction":"ARR","terminal":3,"gate":"62"},
+	{"time":"2019-06-04T19:43:00.000","airline":"Southwest","flight_number":"WN1731","transaction":"ARR","terminal":1,"gate":"25","remark":"Arrived"},
+	{"time":"2019-06-04T19:42:00.000","airline":"Avianca","flight_number":"AV564","transaction":"ARR","terminal":5,"gate":"A1B"},
+	{"time":"2019-06-04T19:42:00.000","airline":"Alaska Airlines","flight_number":"AS1943","transaction":"ARR","terminal":2,"gate":"51A"},
+	{"time":"2019-06-04T19:41:00.000","airline":"American Airlines","flight_number":"AA2798","transaction":"ARR","terminal":2,"gate":"58A"},
+	{"time":"2019-06-04T19:40:00.000","airline":"United Airlines","flight_number":"UA1657","transaction":"DEP","terminal":3,"gate":"62"},
+	{"time":"2019-06-04T19:37:00.000","airline":"United Airlines","flight_number":"UA5912","transaction":"ARR","terminal":3,"gate":"77A"},
+	{"time":"2019-06-04T19:36:00.000","airline":"Alaska Airlines","flight_number":"AS1271","transaction":"ARR","terminal":5,"gate":"A12"},
+	{"time":"2020-03-19T23:30:00.000Z","airline":"sampleasd","flight_number":"u758","transaction":"samplesdfs","terminal":2,"gate":"samplesdfsdf","remark":"samplesdf"}
+]

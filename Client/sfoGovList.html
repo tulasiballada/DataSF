@@ -1,0 +1,97 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="col-md-12 col-sm-12">
+        <div class="col-md-6 col-sm-6">
+            <h3>Sfo Gov List</h3> </div>
+        <div class="col-md-6 col-sm-6"> 
+            <button class="btn btn-link" ng-click="Export('#tblCustomers')">
+                <span class="glyphicon glyphicon-share"></span>
+           Export to Excel
+              </button>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="col-sm-12 col-md-12">         
+                       <label>Global Search</label>
+            <input type="text" ng-model="entitySfoGov" class="form-control" placeholder="Search"> 
+        </div>
+    </div>
+    </div>
+  
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="col-sm-4 col-md-4">         
+                   <label>Only Time Filter</label>
+        <input type="text" ng-model="entitySfoGov.time" class="form-control" placeholder="Search Time"> 
+    </div>
+    <div class="col-sm-4 col-md-4">         
+        <label>Only Airline Filter</label>
+<input type="text" ng-model="entitySfoGov.airline" class="form-control" placeholder="Search Airline"> 
+</div>
+<div class="col-sm-4 col-md-4">         
+    <label>Only Flight_number Filter</label>
+<input type="text" ng-model="entitySfoGov.flight_number" class="form-control" placeholder="Search Flight Number"> 
+</div>
+</div>
+    </div>
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div class="col-sm-4 col-md-4">         
+               <label>Only Transaction Filter</label>
+    <input type="text" ng-model="entitySfoGov.transaction" class="form-control" placeholder="Search Transaction"> 
+</div>
+<div class="col-sm-4 col-md-4">         
+    <label>Only Terminal Filter</label>
+<input type="text" ng-model="entitySfoGov.terminal" class="form-control" placeholder="Search Terminal"> 
+</div>
+<div class="col-sm-4 col-md-4">         
+<label>Only Gate Filter</label>
+<input type="text" ng-model="entitySfoGov.gate" class="form-control" placeholder="Search Gate"> 
+</div>
+</div>
+</div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="panel-body">
+                    <table id="tblCustomers" class="table table-stripped" cellspacing="0" width="100 % ">
+                        <thead>
+                            <tr>
+                  <th ng-click="sort('time')">Time<span class="glyphicon sort-icon" ng-show="sortKey=='time'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span> </th>
+             <th ng-click="sort('airline')">Airline<span class="glyphicon sort-icon" ng-show="sortKey=='airline'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span> </th>
+         <th ng-click="sort('flight_number')">Flight_number <span class="glyphicon sort-icon" ng-show="sortKey=='flight_number'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span> </th>
+          <th ng-click="sort('transaction')">Transaction<span class="glyphicon sort-icon" ng-show="sortKey=='transaction'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span> </th>
+              <th ng-click="sort('terminal')">Terminal<span class="glyphicon sort-icon" ng-show="sortKey=='terminal'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span> </th>
+       <th ng-click="sort('gate')">Gate<span class="glyphicon sort-icon" ng-show="sortKey=='gate'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span> </th>
+                                           <th>                     
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+<tr ng-repeat="entitySfoGovList in ListOfSfoGov | filter:entitySfoGov"  ng-click="toggleDropdown($event)">          
+                                <td>{{entitySfoGovList.time|date:"MM/dd/yyyy"}}</td>
+                                <td>{{entitySfoGovList.airline}}</td>
+                                <td>{{entitySfoGovList.flight_number}}</td>
+                                <td>{{entitySfoGovList.transaction}}</td>
+                                <td>{{entitySfoGovList.terminal}}</td>
+                                <td>{{entitySfoGovList.gate}}</td>
+    <td>   
+        <div class="visible-md visible-lg hidden-sm hidden-xs">
+            <a  href="#/menu/sfoGovdetails/{{entitySfoGovList.flight_number}}" class="btn btn-transparent btn-xs" tooltip-placement="top" uib-tooltip="Edit"><i class="fa fa-pencil"></i></a>
+
+            <a  href ng-click="deleteSfoGov(entitySfoGovList.flight_number)" class="btn btn-transparent btn-xs tooltips" tooltip-placement="top" uib-tooltip="Remove" ng-hide="studentAdd"><i class="fa fa-times fa fa-white"></i></a>
+
+        </div>    
+                        </td>
+                         </tr>
+                       </tbody>
+                    </table>
+                    <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"> </dir-pagination-controls>
+                </div>
+            </div>
+        </div>
+   
+    
+</div>

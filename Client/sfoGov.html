@@ -1,0 +1,126 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <h3>SFO GATE and Stand Assignment</h3>
+    <form name="sfoGateForm" novalidate>
+        <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label>TIME</label>
+                        <input type="datetime-local" class='form-control' name="time" ng-model="entitySfoGov.time" id="time" required>
+                        <span class="error text-small block" ng-if="sfoGateForm.time.$dirty && sfoGateForm.time.$invalid" style="color:red">
+                            <p ng-show="sfoGateForm.time.$error.required" style="color:red">Time Name is required</p>
+
+                                           </span>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6">
+        <div class="form-group">
+            <label>AIRLINE</label>
+            <input type="text" class="form-control" name="airline" ng-model="entitySfoGov.airline" id="airline" ng-minlength="1" ng-maxlength="80" required>
+            <span class="error text-small block" ng-if="sfoGateForm.airline.$dirty && sfoGateForm.airline.$invalid" style="color:red">
+                         <p ng-show="sfoGateForm.airline.$error.required" style="color:red">Airline Name is required</p>
+                        <p ng-show="sfoGateForm.airline.$error.minlength">Airline Name length is 1 characters</p>
+                        <p ng-show="sfoGateForm.airline.$error.maxlength">Airline Name length is 80 characters</p>
+                               </span>
+        </div>
+ 
+        </div>
+<div class="row">
+    <div class="col-sm-6 col-md-6">
+        <div class="form-group">
+            <label>FLIGHT_NUMBER</label>
+            <input type="text" class="form-control" name="flight_number" ng-model="entitySfoGov.flight_number" id="flight_number" ng-minlength="1" ng-maxlength="80" required>
+            <span class="error text-small block" ng-if="sfoGateForm.flight_number.$dirty && sfoGateForm.flight_number.$invalid" style="color:red">
+                         <p ng-show="sfoGateForm.flight_number.$error.required" style="color:red">Flight Number is required</p>
+                        <p ng-show="sfoGateForm.flight_number.$error.minlength">Flight Number length is 1 characters</p>
+                        <p ng-show="sfoGateForm.flight_number.$error.maxlength">Flight Number length is 20 characters</p>
+                               </span>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6">
+        <div class="form-group">
+            <label>TRANSACTION</label>
+            <input type="text" class="form-control" name="transaction" ng-model="entitySfoGov.transaction" id="transation" ng-minlength="1" ng-maxlength="80" required>
+            <span class="error text-small block" ng-if="sfoGateForm.transaction.$dirty && sfoGateForm.transaction.$invalid" style="color:red">
+                         <p ng-show="sfoGateForm.transaction.$error.required" style="color:red">Transaction is required</p>
+                        <p ng-show="sfoGateForm.transaction.$error.minlength">Transaction length is 1 characters</p>
+                        <p ng-show="sfoGateForm.transaction.$error.maxlength">Transaction length is 20 characters</p>
+                               </span>
+        </div>
+    </div>
+   
+
+
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-6">
+        <div class="form-group">
+            <label>TERMINAL</label>
+            <input type="text" class="form-control" name="terminal" ng-model="entitySfoGov.terminal" id="terminal" ng-pattern="/^[0-9]/" ng-minlength="1" ng-maxlength="80" required>
+            <span class="error text-small block" ng-if="sfoGateForm.terminal.$dirty && sfoGateForm.terminal.$invalid" style="color:red">
+                         <p ng-show="sfoGateForm.terminal.$error.required" style="color:red">Terminal is required</p>
+                         <p ng-show="sfoGateForm.terminal.$error.pattern">Not a valid number!</span>
+                        <p ng-show="sfoGateForm.terminal.$error.minlength">Terminal length is 1 number</p>
+                        <p ng-show="sfoGateForm.terminal.$error.maxlength">Terminal length is 20 number</p>
+                               </span>
+        </div>
+    </div>
+
+    <div class="col-sm-6 col-md-6">
+        <div class="form-group">
+            <label>GATE</label>
+            <input type="text" class="form-control" name="gate" ng-model="entitySfoGov.gate" id="gate" ng-minlength="1" ng-maxlength="80" required>
+            <span class="error text-small block" ng-if="sfoGateForm.gate.$dirty && sfoGateForm.gate.$invalid" style="color:red">
+                         <p ng-show="sfoGateForm.gate.$error.required" style="color:red">Gate is required</p>
+                        <p ng-show="sfoGateForm.gate.$error.minlength">Gate length is 1 characters</p>
+                        <p ng-show="sfoGateForm.gate.$error.maxlength">Gate length is 20 characters</p>
+                               </span>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-sm-6 col-md-6">
+        <div class="form-group">
+            <label>REMARK</label>
+        <textarea class="form-control" name="remark" ng-model="entitySfoGov.remark" id="remark" ng-minlength="1" ng-maxlength="80">
+                </textarea>
+           
+            <span class="error text-small block" ng-if="sfoGateForm.remark.$dirty && sfoGateForm.remark.$invalid" style="color:red">
+                         <p ng-show="sfoGateForm.remark.$error.required" style="color:red">Remark is required</p>
+                        <p ng-show="sfoGateForm.remark.$error.minlength">Remark length is 1 characters</p>
+                        <p ng-show="sfoGateForm.remark.$error.maxlength">Remark length is 20 characters</p>
+                               </span>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <div class="form-group">
+
+        <button type="submit" ng-click="addSfoGovDetails(entitySfoGov)" class="btn btn-wide btn-primary" v-pressable>
+                Save
+            </button>
+    </div>
+</form>
+</div>
+        
+      
+
+   
+        
+        
+   
+
+
+
+
+
+
+
+
+
+
+
